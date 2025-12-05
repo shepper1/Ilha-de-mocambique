@@ -1,0 +1,344 @@
+{
+  "pays": "Mozambique",
+  "drapeau": "🇲🇿",
+  "symbole": "🐚",
+  "titre": "Ilha de Moçambique : L'Écho des Siècles et des Océans",
+  "budget_total": "3200€",
+  "duree": "11 jours",
+  "temps_vol": "Environ 15-20h (escales incluses)",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Envol vers l'Afrique Australe",
+      "legende": "Votre aventure débute par un long voyage aérien depuis Paris, direction le Mozambique.\nPréparez-vous à la découverte d'une île chargée d'histoire et de culture.\nProfitez de ce temps de transit pour vous reposer et vous imprégner de l'excitation du voyage.\nLe décalage horaire sera minime, mais le changement de décor sera total.",
+      "lieu": "Air",
+      "activites": [
+        "🛩️ <strong>Vol international Paris - Nampula</strong>: Détendez-vous et profitez des services à bord pour ce long trajet qui inclura au moins une escale majeure."
+      ],
+      "illustration": "ilha_jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "✈️",
+          "titre": "Conseil Vol",
+          "texte": "Prévoyez un oreiller de voyage et des écouteurs pour rendre le vol plus confortable. Hydratez-vous régulièrement."
+        },
+        {
+          "symbole": "🕒",
+          "titre": "Décalage Horaire",
+          "texte": "Le Mozambique est généralement en avance de 1 ou 2 heures sur la France, selon la saison."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏝️",
+      "titre": "De Nampula à l'Île-Musée",
+      "legende": "Après un long voyage, vous atterrissez enfin à Nampula, porte d'entrée vers l'envoûtante Ilha de Moçambique.\nUn transfert pittoresque vous mènera à travers des paysages authentiques jusqu'au pont reliant cette perle de l'océan Indien.\nUne fois installé, laissez-vous porter par la douceur de vivre de l'île.\nUne première balade légère dans la Ville de Pierre vous permettra de vous imprégner de son atmosphère unique et de ses charmes historiques.",
+      "lieu": "Ilha de Moçambique",
+      "activites": [
+        "🚗 <strong>Transfert Nampula - Ilha de Moçambique</strong>: Un trajet d'environ 2 à 3 heures vous fera traverser des paysages typiques avant d'atteindre le pont reliant l'île au continent.",
+        "🚶‍♀️ <strong>Première balade découverte</strong>: Flânez dans les ruelles de la 'ville de pierre', imprégnez-vous de l'architecture coloniale et repérez les lieux emblématiques pour les jours suivants."
+      ],
+      "illustration": "ilha_jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💱",
+          "titre": "Monnaie Locale",
+          "texte": "La monnaie est le Metical mozambicain (MZN). Changez vos euros à l'aéroport ou dans les banques à Nampula ou sur l'île."
+        },
+        {
+          "symbole": "💧",
+          "titre": "Eau Potable",
+          "texte": "Ne buvez que de l'eau en bouteille. Évitez les glaçons si vous avez un doute sur leur provenance."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏰",
+      "titre": "Plongée dans l'Histoire Coloniale",
+      "legende": "Explorez le cœur historique de l'île, ses imposantes fortifications et ses édifices coloniaux qui témoignent d'un riche passé.\nUne journée pour comprendre l'importance stratégique de ce carrefour maritime.\nL'architecture portugaise se révèle à chaque coin de rue, racontant des siècles d'échanges et de conquêtes.\nLaissez-vous transporter par l'ambiance intemporelle de ce site classé au patrimoine mondial de l'UNESCO.",
+      "lieu": "Ilha de Moçambique (Ville de Pierre)",
+      "activites": [
+        "🏛️ <strong>Visite du Fort São Sebastião</strong>: Imprégnez-vous de l'histoire militaire en explorant ce fort impressionnant, l'une des plus anciennes structures européennes d'Afrique subsaharienne.",
+        "👑 <strong>Découverte du Palais et Chapelle de São Paulo</strong>: Admirez l'ancienne résidence du Gouverneur, aujourd'hui un musée, avec son mobilier d'époque et sa chapelle attenante."
+      ],
+      "illustration": "ilha_jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Guide Local",
+          "texte": "Engager un guide local pour la visite du fort et du palais enrichira considérablement votre expérience avec des anecdotes et des faits historiques."
+        },
+        {
+          "symbole": "☀️",
+          "titre": "Protection Solaire",
+          "texte": "Le soleil peut être intense. Portez un chapeau, des lunettes de soleil et appliquez de la crème solaire régulièrement."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🛍️",
+      "titre": "Au Rythme de la Ville de Macuti",
+      "legende": "Laissez derrière vous les pierres historiques pour plonger dans l'effervescence de la 'ville de Macuti', où la vie locale bat son plein.\nUne immersion authentique au cœur des traditions mozambicaines vous attend.\nVous y découvrirez un contraste saisissant avec la Ville de Pierre, un véritable voyage dans le quotidien des habitants.\nLes couleurs, les sons et les odeurs du marché éveilleront tous vos sens.",
+      "lieu": "Ilha de Moçambique (Ville de Macuti)",
+      "activites": [
+        "🚶‍♀️ <strong>Exploration de la Ville de Macuti</strong>: Traversez le pont qui sépare les deux mondes de l'île et découvrez les maisons en bambou et makuti (feuilles de palmier) où vit la majorité des habitants.",
+        "🛍️ <strong>Visite du marché local</strong>: Plongez dans l'ambiance colorée et animée du marché, où vous trouverez épices, poissons frais, fruits exotiques et artisanat local."
+      ],
+      "illustration": "ilha_jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🤝",
+          "titre": "Respect des Coutumes",
+          "texte": "Demandez toujours la permission avant de prendre des photos des habitants, surtout dans la Ville de Macuti."
+        },
+        {
+          "symbole": " bargaining",
+          "titre": "Négociation",
+          "texte": "La négociation est courante sur les marchés. Faites-le avec le sourire et respect."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🐠",
+      "titre": "Évasion Insulaire et Fonds Marins",
+      "legende": "Embarquez à bord d'un dhow traditionnel pour une journée d'évasion vers les îlots déserts qui entourent Ilha de Moçambique.\nPlongez dans les eaux cristallines, explorez des plages immaculées et découvrez la richesse des fonds marins.\nC'est l'occasion parfaite de vous déconnecter et de profiter de la beauté naturelle de l'océan Indien.\nUn pique-nique sur une plage isolée complétera cette expérience paradisiaque.",
+      "lieu": "Îlots de Goa et Sonega",
+      "activites": [
+        "⛵ <strong>Excursion en dhow aux îles Goa et Sonega</strong>: Naviguez sur les eaux turquoise pour atteindre ces petits paradis, parfaits pour la baignade et la détente loin de l'agitation.",
+        " snorkelling <strong>Snorkeling et découverte des coraux</strong>: Équipez-vous d'un masque et d'un tuba pour explorer les récifs coralliens foisonnants de vie marine autour des îles."
+      ],
+      "illustration": "ilha_jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🧴",
+          "titre": "Protection Marine",
+          "texte": "Utilisez une crème solaire respectueuse des coraux pour préserver les écosystèmes marins fragiles."
+        },
+        {
+          "symbole": "🥪",
+          "titre": "Repas",
+          "texte": "Les excursions en dhow incluent souvent un pique-nique de fruits de mer frais. Vérifiez lors de la réservation."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "⛪",
+      "titre": "Patrimoine Religieux et Douceur de Vivre",
+      "legende": "Cette journée vous invite à explorer le sud de l'île, où l'histoire religieuse se mêle à la sérénité des plages.\nUn moment de calme pour admirer des vues imprenables sur l'océan Indien et profiter de la quiétude.\nLa découverte de la plus ancienne structure européenne d'Afrique australe vous plongera dans un passé lointain.\nProfitez de l'après-midi pour vous détendre et savourer la douceur de vivre insulaire.",
+      "lieu": "Ilha de Moçambique (Sud de l'île)",
+      "activites": [
+        "⛪ <strong>Visite de la Chapelle de Nossa Senhora de Baluarte</strong>: Découvrez la plus ancienne structure européenne d'Afrique australe, un joyau architectural datant de 1522, offrant une vue magnifique sur la mer.",
+        "🏖️ <strong>Détente sur les plages du sud</strong>: Profitez des plages plus calmes et moins fréquentées pour vous baigner, lire ou simplement vous imprégner de l'atmosphère paisible de l'île."
+      ],
+      "illustration": "ilha_jour6.jpg",
+      "encarts": [
+        {
+          "symbole": " tides",
+          "titre": "Marées",
+          "texte": "Les plages sont très influencées par les marées. Renseignez-vous sur les horaires pour profiter au mieux de la baignade."
+        },
+        {
+          "symbole": "🚶‍♂️",
+          "titre": "Accès",
+          "texte": "La chapelle est accessible à pied ou en tuk-tuk depuis la Ville de Pierre."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🎨",
+      "titre": "Rencontres et Créations Locales",
+      "legende": "Plongez plus profondément dans la culture locale en rencontrant des artisans et en découvrant les savoir-faire traditionnels de l'île.\nUne journée pour échanger, apprendre et rapporter des souvenirs uniques et authentiques.\nC'est l'occasion de soutenir l'économie locale et d'apprécier la créativité mozambicaine.\nUne balade thématique vous révélera les secrets architecturaux de l'île, enrichissant votre compréhension de son histoire.",
+      "lieu": "Ilha de Moçambique",
+      "activites": [
+        "🎨 <strong>Atelier d'artisanat local</strong>: Participez à un atelier pour apprendre à tresser des paniers, sculpter le bois ou créer des bijoux avec des matériaux locaux.",
+        "🚶‍♀️ <strong>Balade architecturale thématique</strong>: Explorez les différents styles architecturaux de l'île avec un guide local qui vous révélera les secrets des bâtiments et leur histoire."
+      ],
+      "illustration": "ilha_jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Soutien Local",
+          "texte": "Acheter directement auprès des artisans permet de soutenir leur travail et de garantir l'authenticité de vos souvenirs."
+        },
+        {
+          "symbole": "🗣️",
+          "titre": "Langue",
+          "texte": "Quelques mots de portugais ou de macua (langue locale) seront très appréciés par les habitants."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🌅",
+      "titre": "Gastronomie et Magie du Crépuscule",
+      "legende": "Goûtez aux délices de la cuisine mozambicaine, un mélange savoureux d'influences africaines, arabes et portugaises.\nTerminez la journée par un spectacle naturel inoubliable : le coucher de soleil sur l'océan Indien.\nUne expérience sensorielle complète pour célébrer la beauté et la richesse culturelle de l'île.\nLes saveurs exotiques et les couleurs du ciel resteront gravées dans votre mémoire.",
+      "lieu": "Ilha de Moçambique",
+      "activites": [
+        "🍽️ <strong>Cours de cuisine mozambicaine</strong>: Apprenez à préparer des plats typiques à base de fruits de mer frais, de noix de coco et d'épices locales avec un chef de l'île.",
+        "🌅 <strong>Croisière en dhow au coucher du soleil</strong>: Laissez-vous porter par les flots et admirez les couleurs flamboyantes du ciel se reflétant sur l'océan, un moment magique et romantique."
+      ],
+      "illustration": "ilha_jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🌶️",
+          "titre": "Cuisine Locale",
+          "texte": "Ne manquez pas d'essayer le 'Matapa' (feuilles de manioc au lait de coco et cacahuètes) et les crevettes géantes."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Photo",
+          "texte": "Le coucher de soleil sur l'Ilha est spectaculaire. Préparez votre appareil pour des clichés inoubliables."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🛍️",
+      "titre": "Douceurs Matinales et Souvenirs à Emporter",
+      "legende": "Profitez de vos dernières heures sur l'île pour vous détendre, faire quelques emplettes et savourer l'ambiance unique.\nUn moment pour graver les souvenirs de ce voyage inoubliable et prolonger le plaisir.\nFlânez une dernière fois dans les ruelles, à la recherche du cadeau parfait ou d'une dernière saveur locale.\nLaissez-vous bercer par la brise marine avant de préparer votre départ.",
+      "lieu": "Ilha de Moçambique",
+      "activites": [
+        " leisurely <strong>Matinée libre et shopping de souvenirs</strong>: Flânez une dernière fois dans les rues, achetez des objets d'artisanat ou des épices pour ramener un peu de l'île chez vous.",
+        " relax <strong>Détente à la plage ou au café</strong>: Profitez d'un dernier bain de soleil ou d'un café en bord de mer, en repensant aux merveilles découvertes durant votre séjour."
+      ],
+      "illustration": "ilha_jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Idées Cadeaux",
+          "texte": "Les tissus capulanas, les sculptures en bois maconde ou les épices locales sont d'excellents souvenirs."
+        },
+        {
+          "symbole": "💼",
+          "titre": "Préparation",
+          "texte": "Commencez à préparer vos bagages et assurez-vous de ne rien oublier."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "✈️",
+      "titre": "Le Départ de l'Île",
+      "legende": "Il est temps de quitter cette île hors du temps, un véritable joyau de l'océan Indien.\nUn dernier regard sur le lagon et le pont avant de reprendre la route vers Nampula pour votre vol de retour.\nLes souvenirs de l'Ilha de Moçambique vous accompagneront bien au-delà de ses rivages.\nUn voyage riche en découvertes culturelles et naturelles s'achève, mais l'aventure continue dans vos récits.",
+      "lieu": "Ilha de Moçambique / Nampula",
+      "activites": [
+        "🚗 <strong>Transfert Ilha de Moçambique - Nampula</strong>: Reprenez la route qui vous ramènera à l'aéroport de Nampula, avec des paysages qui défileront une dernière fois.",
+        "✈️ <strong>Vol Nampula - Paris (via escale)</strong>: Embarquez pour la première étape de votre voyage retour vers la France."
+      ],
+      "illustration": "ilha_jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🛄",
+          "titre": "Bagages",
+          "texte": "Vérifiez les restrictions de poids et de taille de vos bagages pour le vol international."
+        },
+        {
+          "symbole": "🛂",
+          "titre": "Formalités",
+          "texte": "Prévoyez du temps pour les formalités à l'aéroport de Nampula."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🏡",
+      "titre": "Retour à la Maison",
+      "legende": "Après un long voyage, vous atterrirez à Paris, la tête pleine de souvenirs et d'images de l'envoûtante Ilha de Moçambique.\nCe périple vous aura transporté à travers l'histoire, la culture et les paysages sublimes de ce pays.\nIl est temps de retrouver votre quotidien, enrichi par cette expérience africaine inoubliable.\nLes récits de votre voyage inspireront sans doute d'autres aventuriers.",
+      "lieu": "Paris",
+      "activites": [
+        "🏡 <strong>Arrivée à Paris</strong>: Récupérez vos bagages et rentrez chez vous, le cœur rempli d'expériences africaines et de la douceur de l'océan Indien."
+      ],
+      "illustration": "ilha_jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "😴",
+          "titre": "Jet Lag",
+          "texte": "Prévoyez une journée de repos pour vous remettre du décalage horaire et du long voyage."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Partage",
+          "texte": "N'oubliez pas de partager vos photos et vos souvenirs avec vos proches!"
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1400€/pers (Vol A/R Paris-Nampula avec escales)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "250€/pers (Transferts Nampula-Ilha A/R, tuk-tuks, dhows)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "400€/pers (10 jours à 40€/jour en moyenne)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "900€/pers (9 nuits à 100€/nuit en hôtel de charme)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "200€/pers (Entrées sites, excursions en dhow, ateliers)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de Mai à Novembre, correspondant à la saison sèche.",
+      "symbole": "☀️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Un visa est obligatoire pour les ressortissants français. Il peut être obtenu en ligne (e-visa) ou à l'arrivée.",
+      "symbole": "🛂"
+    },
+    {
+      "titre": "La vaccination contre la fièvre jaune est recommandée. Un traitement antipaludique est fortement conseillé.",
+      "symbole": "💉"
+    },
+    {
+      "titre": "La langue officielle est le portugais. Des notions seront utiles, mais l'anglais est souvent parlé dans les lieux touristiques.",
+      "symbole": "🗣️"
+    },
+    {
+      "titre": "La prudence est de mise, surtout la nuit. Ne montrez pas de signes extérieurs de richesse et soyez vigilant.",
+      "symbole": "⚠️"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations générales sur le pays",
+      "titre": "Office National du Tourisme du Mozambique",
+      "url": "https://www.mozambique.co.za/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Conseils aux voyageurs du Ministère des Affaires Étrangères",
+      "titre": "France Diplomatie - Mozambique",
+      "url": "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/mozambique/",
+      "symbole": "🌐"
+    },
+    {
+      "legende": "Prévisions météo locales",
+      "titre": "Météo Ilha de Moçambique",
+      "url": "https://www.accuweather.com/fr/mz/ilha-de-mocambique/341071/weather-forecast/341071",
+      "symbole": "🌤️"
+    }
+  ]
+}
