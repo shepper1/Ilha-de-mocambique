@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilha de Moçambique : L'Écho des Siècles et des Océans </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        template: {
+                            sable: '#F3E5AB',
+                            ocre: '#C66B3D',
+                            roche: '#2D2A26',
+                            ciel: '#4A6C6F',
+                            bg: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #C66B3D;
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">Ilha de Moçambique : L'Écho des Siècles et des Océans</a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Envol vers l'Afrique Australe</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 De Nampula à l'Île-Musée</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Plongée dans l'Histoire Coloniale</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Au Rythme de la Ville de Macuti</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Évasion Insulaire et Fonds Marins</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Patrimoine Religieux et Douceur de Vivre</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Rencontres et Créations Locales</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Gastronomie et Magie du Crépuscule</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Douceurs Matinales et Souvenirs à Emporter</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Le Départ de l'Île</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Retour à la Maison</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[85vh] flex items-center justify-center overflow-hidden pt-12 md:pt-0">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        
+        <video autoplay muted loop playsinline 
+               poster="https://images.unsplash.com/photo-1579606946838-6db34433f3c0?q=80&w=2070"
+               class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://videos.pexels.com/video-files/4456988/4456988-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.3em] mb-4 uppercase text-sm font-semibold">Feuille de Route</p>
+            <h1 class="font-Playfair italic text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">Ilha de mocambique</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-light max-w-2xl mx-auto leading-relaxed">Ilha de Moçambique : L'Écho des Siècles et des Océans</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🗓️ 11 jours</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">💰 3200€</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🛬 Environ 15-20h (escales incluses) depuis Paris</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-20 relative">
+        <div class="text-center mb-16">
+            <span class="text-template-ocre font-bold tracking-widest text-xs uppercase">Le Roadtrip</span>
+            <h2 class="font-serif text-4xl mt-2 text-template-roche">Votre Programme</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Envol vers l'Afrique Australe</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Votre aventure débute par un long voyage aérien depuis Paris, direction le Mozambique.
+Préparez-vous à la découverte d'une île chargée d'histoire et de culture.
+Profitez de ce temps de transit pour vous reposer et vous imprégner de l'excitation du voyage.
+Le décalage horaire sera minime, mais le changement de décor sera total.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛩️ <strong>Vol international Paris - Nampula</strong>: Détendez-vous et profitez des services à bord pour ce long trajet qui inclura au moins une escale majeure.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Conseil Vol</p>
+                                <p class="text-gray-700">Prévoyez un oreiller de voyage et des écouteurs pour rendre le vol plus confortable. Hydratez-vous régulièrement.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🕒 Décalage Horaire</p>
+                                <p class="text-gray-700">Le Mozambique est généralement en avance de 1 ou 2 heures sur la France, selon la saison.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">De Nampula à l'Île-Musée</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, vous atterrissez enfin à Nampula, porte d'entrée vers l'envoûtante Ilha de Moçambique.
+Un transfert pittoresque vous mènera à travers des paysages authentiques jusqu'au pont reliant cette perle de l'océan Indien.
+Une fois installé, laissez-vous porter par la douceur de vivre de l'île.
+Une première balade légère dans la Ville de Pierre vous permettra de vous imprégner de son atmosphère unique et de ses charmes historiques.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚗 <strong>Transfert Nampula - Ilha de Moçambique</strong>: Un trajet d'environ 2 à 3 heures vous fera traverser des paysages typiques avant d'atteindre le pont reliant l'île au continent.</li>
+                            
+                                <li>🚶‍♀️ <strong>Première balade découverte</strong>: Flânez dans les ruelles de la 'ville de pierre', imprégnez-vous de l'architecture coloniale et repérez les lieux emblématiques pour les jours suivants.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💱 Monnaie Locale</p>
+                                <p class="text-gray-700">La monnaie est le Metical mozambicain (MZN). Changez vos euros à l'aéroport ou dans les banques à Nampula ou sur l'île.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Eau Potable</p>
+                                <p class="text-gray-700">Ne buvez que de l'eau en bouteille. Évitez les glaçons si vous avez un doute sur leur provenance.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Plongée dans l'Histoire Coloniale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez le cœur historique de l'île, ses imposantes fortifications et ses édifices coloniaux qui témoignent d'un riche passé.
+Une journée pour comprendre l'importance stratégique de ce carrefour maritime.
+L'architecture portugaise se révèle à chaque coin de rue, racontant des siècles d'échanges et de conquêtes.
+Laissez-vous transporter par l'ambiance intemporelle de ce site classé au patrimoine mondial de l'UNESCO.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🏛️ <strong>Visite du Fort São Sebastião</strong>: Imprégnez-vous de l'histoire militaire en explorant ce fort impressionnant, l'une des plus anciennes structures européennes d'Afrique subsaharienne.</li>
+                            
+                                <li>👑 <strong>Découverte du Palais et Chapelle de São Paulo</strong>: Admirez l'ancienne résidence du Gouverneur, aujourd'hui un musée, avec son mobilier d'époque et sa chapelle attenante.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Guide Local</p>
+                                <p class="text-gray-700">Engager un guide local pour la visite du fort et du palais enrichira considérablement votre expérience avec des anecdotes et des faits historiques.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection Solaire</p>
+                                <p class="text-gray-700">Le soleil peut être intense. Portez un chapeau, des lunettes de soleil et appliquez de la crème solaire régulièrement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Au Rythme de la Ville de Macuti</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Laissez derrière vous les pierres historiques pour plonger dans l'effervescence de la 'ville de Macuti', où la vie locale bat son plein.
+Une immersion authentique au cœur des traditions mozambicaines vous attend.
+Vous y découvrirez un contraste saisissant avec la Ville de Pierre, un véritable voyage dans le quotidien des habitants.
+Les couleurs, les sons et les odeurs du marché éveilleront tous vos sens.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚶‍♀️ <strong>Exploration de la Ville de Macuti</strong>: Traversez le pont qui sépare les deux mondes de l'île et découvrez les maisons en bambou et makuti (feuilles de palmier) où vit la majorité des habitants.</li>
+                            
+                                <li>🛍️ <strong>Visite du marché local</strong>: Plongez dans l'ambiance colorée et animée du marché, où vous trouverez épices, poissons frais, fruits exotiques et artisanat local.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 Respect des Coutumes</p>
+                                <p class="text-gray-700">Demandez toujours la permission avant de prendre des photos des habitants, surtout dans la Ville de Macuti.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> bargaining Négociation</p>
+                                <p class="text-gray-700">La négociation est courante sur les marchés. Faites-le avec le sourire et respect.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion Insulaire et Fonds Marins</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez à bord d'un dhow traditionnel pour une journée d'évasion vers les îlots déserts qui entourent Ilha de Moçambique.
+Plongez dans les eaux cristallines, explorez des plages immaculées et découvrez la richesse des fonds marins.
+C'est l'occasion parfaite de vous déconnecter et de profiter de la beauté naturelle de l'océan Indien.
+Un pique-nique sur une plage isolée complétera cette expérience paradisiaque.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>⛵ <strong>Excursion en dhow aux îles Goa et Sonega</strong>: Naviguez sur les eaux turquoise pour atteindre ces petits paradis, parfaits pour la baignade et la détente loin de l'agitation.</li>
+                            
+                                <li> snorkelling <strong>Snorkeling et découverte des coraux</strong>: Équipez-vous d'un masque et d'un tuba pour explorer les récifs coralliens foisonnants de vie marine autour des îles.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧴 Protection Marine</p>
+                                <p class="text-gray-700">Utilisez une crème solaire respectueuse des coraux pour préserver les écosystèmes marins fragiles.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥪 Repas</p>
+                                <p class="text-gray-700">Les excursions en dhow incluent souvent un pique-nique de fruits de mer frais. Vérifiez lors de la réservation.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Patrimoine Religieux et Douceur de Vivre</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée vous invite à explorer le sud de l'île, où l'histoire religieuse se mêle à la sérénité des plages.
+Un moment de calme pour admirer des vues imprenables sur l'océan Indien et profiter de la quiétude.
+La découverte de la plus ancienne structure européenne d'Afrique australe vous plongera dans un passé lointain.
+Profitez de l'après-midi pour vous détendre et savourer la douceur de vivre insulaire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>⛪ <strong>Visite de la Chapelle de Nossa Senhora de Baluarte</strong>: Découvrez la plus ancienne structure européenne d'Afrique australe, un joyau architectural datant de 1522, offrant une vue magnifique sur la mer.</li>
+                            
+                                <li>🏖️ <strong>Détente sur les plages du sud</strong>: Profitez des plages plus calmes et moins fréquentées pour vous baigner, lire ou simplement vous imprégner de l'atmosphère paisible de l'île.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> tides Marées</p>
+                                <p class="text-gray-700">Les plages sont très influencées par les marées. Renseignez-vous sur les horaires pour profiter au mieux de la baignade.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♂️ Accès</p>
+                                <p class="text-gray-700">La chapelle est accessible à pied ou en tuk-tuk depuis la Ville de Pierre.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rencontres et Créations Locales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez plus profondément dans la culture locale en rencontrant des artisans et en découvrant les savoir-faire traditionnels de l'île.
+Une journée pour échanger, apprendre et rapporter des souvenirs uniques et authentiques.
+C'est l'occasion de soutenir l'économie locale et d'apprécier la créativité mozambicaine.
+Une balade thématique vous révélera les secrets architecturaux de l'île, enrichissant votre compréhension de son histoire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🎨 <strong>Atelier d'artisanat local</strong>: Participez à un atelier pour apprendre à tresser des paniers, sculpter le bois ou créer des bijoux avec des matériaux locaux.</li>
+                            
+                                <li>🚶‍♀️ <strong>Balade architecturale thématique</strong>: Explorez les différents styles architecturaux de l'île avec un guide local qui vous révélera les secrets des bâtiments et leur histoire.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Soutien Local</p>
+                                <p class="text-gray-700">Acheter directement auprès des artisans permet de soutenir leur travail et de garantir l'authenticité de vos souvenirs.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue</p>
+                                <p class="text-gray-700">Quelques mots de portugais ou de macua (langue locale) seront très appréciés par les habitants.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Gastronomie et Magie du Crépuscule</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Goûtez aux délices de la cuisine mozambicaine, un mélange savoureux d'influences africaines, arabes et portugaises.
+Terminez la journée par un spectacle naturel inoubliable : le coucher de soleil sur l'océan Indien.
+Une expérience sensorielle complète pour célébrer la beauté et la richesse culturelle de l'île.
+Les saveurs exotiques et les couleurs du ciel resteront gravées dans votre mémoire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🍽️ <strong>Cours de cuisine mozambicaine</strong>: Apprenez à préparer des plats typiques à base de fruits de mer frais, de noix de coco et d'épices locales avec un chef de l'île.</li>
+                            
+                                <li>🌅 <strong>Croisière en dhow au coucher du soleil</strong>: Laissez-vous porter par les flots et admirez les couleurs flamboyantes du ciel se reflétant sur l'océan, un moment magique et romantique.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌶️ Cuisine Locale</p>
+                                <p class="text-gray-700">Ne manquez pas d'essayer le 'Matapa' (feuilles de manioc au lait de coco et cacahuètes) et les crevettes géantes.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photo</p>
+                                <p class="text-gray-700">Le coucher de soleil sur l'Ilha est spectaculaire. Préparez votre appareil pour des clichés inoubliables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Douceurs Matinales et Souvenirs à Emporter</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de vos dernières heures sur l'île pour vous détendre, faire quelques emplettes et savourer l'ambiance unique.
+Un moment pour graver les souvenirs de ce voyage inoubliable et prolonger le plaisir.
+Flânez une dernière fois dans les ruelles, à la recherche du cadeau parfait ou d'une dernière saveur locale.
+Laissez-vous bercer par la brise marine avant de préparer votre départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li> leisurely <strong>Matinée libre et shopping de souvenirs</strong>: Flânez une dernière fois dans les rues, achetez des objets d'artisanat ou des épices pour ramener un peu de l'île chez vous.</li>
+                            
+                                <li> relax <strong>Détente à la plage ou au café</strong>: Profitez d'un dernier bain de soleil ou d'un café en bord de mer, en repensant aux merveilles découvertes durant votre séjour.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Idées Cadeaux</p>
+                                <p class="text-gray-700">Les tissus capulanas, les sculptures en bois maconde ou les épices locales sont d'excellents souvenirs.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💼 Préparation</p>
+                                <p class="text-gray-700">Commencez à préparer vos bagages et assurez-vous de ne rien oublier.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Le Départ de l'Île</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Il est temps de quitter cette île hors du temps, un véritable joyau de l'océan Indien.
+Un dernier regard sur le lagon et le pont avant de reprendre la route vers Nampula pour votre vol de retour.
+Les souvenirs de l'Ilha de Moçambique vous accompagneront bien au-delà de ses rivages.
+Un voyage riche en découvertes culturelles et naturelles s'achève, mais l'aventure continue dans vos récits.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚗 <strong>Transfert Ilha de Moçambique - Nampula</strong>: Reprenez la route qui vous ramènera à l'aéroport de Nampula, avec des paysages qui défileront une dernière fois.</li>
+                            
+                                <li>✈️ <strong>Vol Nampula - Paris (via escale)</strong>: Embarquez pour la première étape de votre voyage retour vers la France.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛄 Bagages</p>
+                                <p class="text-gray-700">Vérifiez les restrictions de poids et de taille de vos bagages pour le vol international.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛂 Formalités</p>
+                                <p class="text-gray-700">Prévoyez du temps pour les formalités à l'aéroport de Nampula.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à la Maison</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, vous atterrirez à Paris, la tête pleine de souvenirs et d'images de l'envoûtante Ilha de Moçambique.
+Ce périple vous aura transporté à travers l'histoire, la culture et les paysages sublimes de ce pays.
+Il est temps de retrouver votre quotidien, enrichi par cette expérience africaine inoubliable.
+Les récits de votre voyage inspireront sans doute d'autres aventuriers.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🏡 <strong>Arrivée à Paris</strong>: Récupérez vos bagages et rentrez chez vous, le cœur rempli d'expériences africaines et de la douceur de l'océan Indien.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Ilha-de-mocambique/main/ilha_jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">😴 Jet Lag</p>
+                                <p class="text-gray-700">Prévoyez une journée de repos pour vous remettre du décalage horaire et du long voyage.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Partage</p>
+                                <p class="text-gray-700">N'oubliez pas de partager vos photos et vos souvenirs avec vos proches!</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <footer id="pratique" class="bg-white border-t border-gray-200 pt-16 pb-10 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-12">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget vol: </strong>1400€/pers (Vol A/R Paris-Nampula avec escales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget transports: </strong>250€/pers (Transferts Nampula-Ilha A/R, tuk-tuks, dhows)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget repas: </strong>400€/pers (10 jours à 40€/jour en moyenne)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget logement: </strong>900€/pers (9 nuits à 100€/nuit en hôtel de charme)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget activités: </strong>200€/pers (Entrées sites, excursions en dhow, ateliers)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Les périodes idéales pour ce séjour sont les mois de Mai à Novembre, correspondant à la saison sèche.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>🧳</span> À savoir
+                </h4>
+                <ul class="text-sm text-gray-600 space-y-3">
+
+                        <li><strong>🛂 :</strong> Un visa est obligatoire pour les ressortissants français. Il peut être obtenu en ligne (e-visa) ou à l'arrivée.</li>
+                    
+                        <li><strong>💉 :</strong> La vaccination contre la fièvre jaune est recommandée. Un traitement antipaludique est fortement conseillé.</li>
+                    
+                        <li><strong>🗣️ :</strong> La langue officielle est le portugais. Des notions seront utiles, mais l'anglais est souvent parlé dans les lieux touristiques.</li>
+                    
+                        <li><strong>⚠️ :</strong> La prudence est de mise, surtout la nuit. Ne montrez pas de signes extérieurs de richesse et soyez vigilant.</li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2"><span>🔗</span> Liens Utiles</h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://shepper1.github.io/Ilha de mocambique/map.html" target="_blank" class="hover:underline flex items-center gap-2"><strong>🗺️ Carte</strong></a></li>
+                    
+                        <li><a href="https://www.mozambique.co.za/" target="_blank" class="hover:underline flex items-center gap-2"><strong>📘 Office National du Tourisme du Mozambique</strong></a></li>
+                    
+                        <li><a href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/mozambique/" target="_blank" class="hover:underline flex items-center gap-2"><strong>🌐 France Diplomatie - Mozambique</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/mz/ilha-de-mocambique/341071/weather-forecast/341071" target="_blank" class="hover:underline flex items-center gap-2"><strong>🌤️ Météo Ilha de Moçambique</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-100 pt-8">
+            <p class="font-serif text-2xl text-template-roche mb-2">Ilha de mocambique</p>
+            <p class="text-xs text-gray-400">© 2025 - Roadmap</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Gestion de l'affichage du menu au scroll
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // 2. Détection de l'étape active
+        const observerOptions = {
+            root: null,
+            rootMargin: '-40% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+
+                    document.querySelectorAll('.nav-item-desktop').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (activeId.includes('jour') && linkHref === 'jour-1') {
+                            link.classList.add('text-template-ocre');
+                        } else if (activeId === 'pratique' && linkHref === 'pratique') {
+                            link.classList.add('text-template-ocre');
+                        } else {
+                            link.classList.remove('text-template-ocre');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('div[id^="jour-"], footer#pratique').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
